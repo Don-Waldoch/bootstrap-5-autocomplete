@@ -18,11 +18,19 @@
         </div>
     </div>
 </div>
+
+<style>
+.dropdown-menu {         
+  max-height: 200px;
+  overflow-y: auto;
+}
+</style>
+
 <script>
     const field = document.getElementById('input');
     const ac = new Autocomplete(field, {
         data: [{label: "I'm a label", value: 42}],
-        maximumItems: 5,
+        maximumItems: 15,
         treshold: 1,
         onSelectItem: ({label, value}) => {
             console.log("user selected:", label, value);
